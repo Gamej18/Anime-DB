@@ -23,6 +23,7 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.2.3"
+    "@tauri-apps/cli": "^1.2.3",
+    "@types/express": "^4.17.17"
   }
 }
