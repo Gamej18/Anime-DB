@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { connectToDatabase } from "../../lib/mongodb";
+import MenuBar from '@/components/menubar';
 
 
 export default function HomePage({properties}: {properties: any}) {
@@ -7,14 +8,15 @@ export default function HomePage({properties}: {properties: any}) {
   console.log(properties)
   return (
     <div>
-      <div>
+      {/* <div>
         {properties && properties.map((property: any) => (
             <div>
               {property.animetitle}
             </div>
           )
         )}
-      </div>
+      </div> */}
+      <MenuBar />
       <Head>
         <title>Creat Next App</title>
         <link rel="icon" href="/favicon,ico" />
