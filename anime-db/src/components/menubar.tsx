@@ -1,11 +1,14 @@
 import { Search } from "react-bootstrap-icons";
-import  OpenButton from "./open";
+import OpenButton from "./open";
+import CloseButton from "./close";
 
 export default function MenuBar() {
     return (
         <div className="main">
-            <OpenButton />
+          
+            <CloseButton />
             <div className="menu" id="menu">
+            <OpenButton />
                 <Search size={20} className="item-search" />
                 <ul className="item-list">
                     <li className="item-genre">Genre</li>
