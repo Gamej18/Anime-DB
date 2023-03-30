@@ -1,5 +1,6 @@
 import $ from "jquery";
 import { LayoutSidebar } from "react-bootstrap-icons";
+import { X } from "react-bootstrap-icons";
 
 export default function OpenButton () {   
     function handleclick() {
@@ -11,7 +12,7 @@ export default function OpenButton () {
     }
     return (
         <button onClick={handleclick}>
-            <LayoutSidebar size="30" className="item-sidebar" />
+                 <X size="30"/>
         </button>
     );
 }

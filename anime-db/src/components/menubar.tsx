@@ -1,14 +1,14 @@
 import { Search } from "react-bootstrap-icons";
-import OpenButton from "./open";
 import CloseButton from "./close";
+import OpenButton from "./open";
+import { LayoutSidebar } from "react-bootstrap-icons";
+import { X } from "react-bootstrap-icons";
 
 export default function MenuBar() {
     return (
         <div className="main">
-          
-            <CloseButton />
+             <CloseButton inactiveIcon={<X/>}, activeIcon={<LayoutSidebar/>} />
             <div className="menu" id="menu">
-            <OpenButton />
                 <Search size={20} className="item-search" />
                 <ul className="item-list">
                     <li className="item-genre">Genre</li>
