@@ -10,12 +10,10 @@
     background-color: #212A3E;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 4em 30px;
-    animation-name: menu-animation;
-    animation-duration: 1s;
+    border-radius: 5px;
 }
 
-
-@keyframes menu-animation {
+/* @keyframes menu-animation {
     from {
         transform: translateX(-200px);
     }
@@ -23,7 +21,7 @@
     to {
         transform: translateX(0px);
     }
-}
+} */
 
 @media screen and (max-width: 600px) {
     .menu {
@@ -35,12 +33,14 @@
 .item-list {
     line-height: 100px;
     text-align: center;
+    color:white;
 }
 
 .item-search {
     /* border: 2px solid red; */
     justify-self: end;
     margin: 40px 40px 0 0;
+    color: white;
 }
 
 .item-genre {
