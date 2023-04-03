@@ -15,5 +15,3 @@ export default function CloseButton () {
         </button>
     );
 }
-
-//FIX THIS OMGGGGGG
