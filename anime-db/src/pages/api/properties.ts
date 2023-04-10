@@ -1,7 +1,7 @@
 // import { RequestHandler } from 'express';
 import { connectToDatabase } from '../../../lib/mongodb';
 
-export default async function handler(req: Request, res: { json: (arg0: { hello: string; }) => void; }) 
+export default async function Handler(req: Request, res: { json: (arg0: { hello: string; }) => void; }) 
 {
     const {db} = await connectToDatabase();
 

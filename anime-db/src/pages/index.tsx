@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import { connectToDatabase } from "../../lib/mongodb";
 import MenuBar from '@/components/menubar';
+import Slider from '@/components/toppickbar';
 
 
 export default function HomePage({properties}: {properties: any}) {
-  
-  console.log(properties)
   return (
     <div>
       {/* <div>
@@ -16,6 +15,7 @@ export default function HomePage({properties}: {properties: any}) {
           )
         )}
       </div> */}
+      <Slider />
       <MenuBar />
       <Head>
         <title>Creat Next App</title>
@@ -27,7 +27,7 @@ export default function HomePage({properties}: {properties: any}) {
 }
 
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context : any) {
   const { db } = await connectToDatabase()
 
   const data = await db.collection("animes").find({}).limit(5).toArray();
