@@ -6,11 +6,11 @@ export default function Slider() {
     // let i = 0;
     // const [active, setActive] = useState(false);
     function handleRightClick(data: any) {
-        // properties[i+1];
-        console.log("fi");
-        return(
+        return (
             <div>
                 <h2>{data.animetitle}</h2>
+                <h2>Hi</h2>
+                <p>dfssdfsdf</p>
             </div>
         )
     }
@@ -21,7 +21,7 @@ export default function Slider() {
     )
 }
 
-export async function getServerSideProps(context: any) {
+export async function getServerSideProps() {
     try {
         const { db } = await connectToDatabase();
 
