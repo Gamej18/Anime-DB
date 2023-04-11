@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import { connectToDatabase } from "../../lib/mongodb";
-import MenuBar from '@/components/menubar';
-import Slider from '@/components/toppickbar';
+import MenuBar from '@/pages/components/menubar';
+import Slider from '@/pages/components/toppickbar';
 
 
-export default function HomePage({properties}: {properties: any}) {
+
+export default function HomePage() {
   return (
     <div>
       {/* <div>
@@ -27,21 +27,20 @@ export default function HomePage({properties}: {properties: any}) {
 }
 
 
-export async function getServerSideProps(context : any) {
-  const { db } = await connectToDatabase()
+// export async function getServerSideProps(context: any) {
+//     try {
+//         const { db } = await connectToDatabase();
 
-  const data = await db.collection("animes").find({}).limit(5).toArray();
+//         const data = await db.collection("animes")
+//         .find({})
+//         .limit(5)
+//         .toArray();
 
-  const properties = JSON.parse(JSON.stringify(data));
+//         return {
+//             props: { data: JSON.parse(JSON.stringify(data)) }
+//         };
 
-  const filtered = properties.map((property: { _id: any; animetitle: any; }) => {
-    return {
-      _id: property._id,
-      animetitle: property.animetitle
-    }
-  })
-  
-  return {
-    props: { properties: filtered },
-  }
-}
+//     } catch (e) {
+//         console.error(e);
+//     }
+// }

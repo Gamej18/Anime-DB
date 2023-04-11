@@ -18,7 +18,7 @@ if (!dbName) {
   )
 }
 
-export async function connectToDatabase() {
+export default async function connectToDatabase() {
   if (cachedClient && cachedDb) {
     return { client: cachedClient, db: cachedDb }
   }
