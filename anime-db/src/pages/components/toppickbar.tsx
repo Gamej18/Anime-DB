@@ -1,3 +1,4 @@
+import { data } from "jquery";
 import { useState, useEffect } from "react";
 import { ArrowLeftCircle } from "react-bootstrap-icons";
 import connectToDatabase from '../../../lib/mongodb';
@@ -6,17 +7,12 @@ export default function Slider() {
     // let i = 0;
     // const [active, setActive] = useState(false);
     function handleRightClick(data: any) {
-        return (
-            <div>
-                <h2>{data.animetitle}</h2>
-                <h2>Hi</h2>
-                <p>dfssdfsdf</p>
-            </div>
-        )
+        // Fix this
     }
     return (
         <button onClick={handleRightClick}>
             <ArrowLeftCircle/>
+
         </button>
     )
 }
