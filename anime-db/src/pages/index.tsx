@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import MenuBar from '@/pages/components/menubar';
 import Slider from '@/pages/components/toppickbar';
-
-
+import connectToDatabase from '../../lib/mongodb';
 
 export default function HomePage() {
   return (
@@ -27,20 +26,24 @@ export default function HomePage() {
 }
 
 
-// export async function getServerSideProps(context: any) {
-//     try {
-//         const { db } = await connectToDatabase();
 
-//         const data = await db.collection("animes")
-//         .find({})
-//         .limit(5)
-//         .toArray();
+export async function getServerSideProps() {
+  try {
+      
+      const client:any = await connectToDatabase;
+      const db = client.db("AnimeDB");
 
-//         return {
-//             props: { data: JSON.parse(JSON.stringify(data)) }
-//         };
+      const data = await db
+      .collection("animes")
+      .find({})
+      .limit(5)
+      .toArray();
 
-//     } catch (e) {
-//         console.error(e);
-//     }
-// }
+      return {
+          props: { data: JSON.parse(JSON.stringify(data)) }
+      };
+
+  } catch (e) {
+      console.error(e);
+  }
+}

@@ -1,36 +1,45 @@
 import { data } from "jquery";
-import { useState, useEffect } from "react";
-import { ArrowLeftCircle } from "react-bootstrap-icons";
-import connectToDatabase from '../../../lib/mongodb';
+import { useState, useEffect, Children } from "react";
+import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
+// import connectToDatabase from '../../../lib/mongodb';
 
-export default function Slider() {
+export default function Slider( {data}:any ) {
     // let i = 0;
-    // const [active, setActive] = useState(false);
-    function handleRightClick(data: any) {
+    // const [active, setActive] = useState(data);
+    function handleRightClick() {
         // Fix this
+        
     }
     return (
-        <button onClick={handleRightClick}>
-            <ArrowLeftCircle/>
-
-        </button>
+        <>
+            {data && data.map((datas:any) => (
+                <h2>{datas.animetitle}</h2>
+            ))}
+            <button onClick={handleRightClick}>
+                <ArrowRightCircle/>
+            </button>
+      
+        </>
     )
 }
 
-export async function getServerSideProps() {
-    try {
-        const { db } = await connectToDatabase();
-
-        const data = await db.collection("animes")
-        .find({})
-        .limit(5)
-        .toArray();
-
-        return {
-            props: { data: JSON.parse(JSON.stringify(data)) }
-        };
-
-    } catch (e) {
-        console.error(e);
-    }
-}
+// export async function getServerSideProps() {
+//     try {
+        
+//         const client:any = await connectToDatabase;
+//         const db = client.db("AnimeDB");
+  
+//         const data = await db
+//         .collection("animes")
+//         .find({})
+//         .limit(5)
+//         .toArray();
+  
+//         return {
+//             props: { data: JSON.parse(JSON.stringify(data)) }
+//         };
+  
+//     } catch (e) {
+//         console.error(e);
+//     }
+// }

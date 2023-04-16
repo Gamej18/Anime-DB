@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/index.tsx", "src/pages/components/menubar.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/index.tsx", "src/pages/components/menubar.tsx", "src/pages/components/toppickbar.tsx", "src/pages/api/properties.ts"],
   "exclude": ["node_modules"]
 }
