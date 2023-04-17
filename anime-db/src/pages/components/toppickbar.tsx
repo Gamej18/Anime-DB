@@ -1,45 +1,56 @@
 import { data } from "jquery";
-import { useState, useEffect, Children } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
-// import connectToDatabase from '../../../lib/mongodb';
+import { FadeInAnimation } from './animation.js';
+import connectToDatabase from '../../../lib/mongodb';
 
-export default function Slider( {data}:any ) {
-    // let i = 0;
-    // const [active, setActive] = useState(data);
-    function handleRightClick() {
-        // Fix this
-        
-    }
+function Slider( {data}:any ) {
+    // const ref = useRef(null);
+    // useEffect(() => {
+    //     const animation = new FadeInAnimation(ref.current);
+    //     animation.start(1000);
+    //     return () => {
+    //         animation.stop();;
+    //     };
+    // }, []);
     return (
         <>
-            {data && data.map((datas:any) => (
-                <h2>{datas.animetitle}</h2>
-            ))}
-            <button onClick={handleRightClick}>
-                <ArrowRightCircle/>
-            </button>
-      
+            <h1>Hi</h1>
+            {/* <h1>{data.animatitle}</h1> */}
         </>
     )
 }
 
-// export async function getServerSideProps() {
-//     try {
+export default function RightClickHandle() {
+    const [active, setActive] = useState(false);
+    return (
+        <>
+            <button onClick={() => setActive(!active)}>
+                <ArrowRightCircle/>
+            </button>
+            {active && <Slider/>}
+        </>
+    )
+
+
+}
+
+export async function getServerSideProps() {
+    try {
         
-//         const client:any = await connectToDatabase;
-//         const db = client.db("AnimeDB");
+        const client:any = await connectToDatabase;
+        const db = client.db("AnimeDB");
   
-//         const data = await db
-//         .collection("animes")
-//         .find({})
-//         .limit(5)
-//         .toArray();
+        const data = await db
+        .collection("animes")
+        .find({})
+        .limit(5)
+        .toArray();
   
-//         return {
-//             props: { data: JSON.parse(JSON.stringify(data)) }
-//         };
-  
-//     } catch (e) {
-//         console.error(e);
-//     }
-// }
+        return {
+            props: { data: JSON.parse(JSON.stringify(data)) }
+        };
+    } catch (e) {
+        console.error(e);
+    }
+}

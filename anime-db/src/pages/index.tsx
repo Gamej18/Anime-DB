@@ -24,26 +24,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-
-
-export async function getServerSideProps() {
-  try {
-      
-      const client:any = await connectToDatabase;
-      const db = client.db("AnimeDB");
-
-      const data = await db
-      .collection("animes")
-      .find({})
-      .limit(5)
-      .toArray();
-
-      return {
-          props: { data: JSON.parse(JSON.stringify(data)) }
-      };
-
-  } catch (e) {
-      console.error(e);
-  }
-}
