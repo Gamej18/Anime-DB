@@ -33,13 +33,10 @@ export default function RightClickHandle() {
             {active && <Slider/>}
         </>
     )
-
-
 }
 
 export async function getServerSideProps() {
     try {
-        
         const { client } = await connectToDatabase();
     
         const data = await client
