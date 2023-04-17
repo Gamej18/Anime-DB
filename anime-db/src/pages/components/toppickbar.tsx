@@ -40,10 +40,9 @@ export default function RightClickHandle() {
 export async function getServerSideProps() {
     try {
         
-        const client:any = await connectToDatabase;
-        const db = client.db("AnimeDB");
-  
-        const data = await db
+        const { client } = await connectToDatabase();
+    
+        const data = await client
         .collection("animes")
         .find({})
         .limit(5)

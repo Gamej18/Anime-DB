@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import MenuBar from '@/pages/components/menubar';
 import Slider from '@/pages/components/toppickbar';
-import connectToDatabase from '../../lib/mongodb';
 
 export default function HomePage() {
   return (
