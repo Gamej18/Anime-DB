@@ -16,7 +16,9 @@ function Slider( {data}:any ) {
     return (
         <>
             <h1>Hi</h1>
-            {/* <h1>{data.animatitle}</h1> */}
+            {data && data.map((date: any) => (
+                <h2>{date.animetitle}</h2>
+            ))}
         </>
     )
 }
