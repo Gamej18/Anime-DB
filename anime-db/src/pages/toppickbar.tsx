@@ -49,3 +49,7 @@ export async function getServerSideProps() {
         props: { properties:properties }
     };
 }
+
+
+//DOES NOT WORK IN FUNCTION OUTSIDE OF THE MAINPAGE?????????? 
+//WHY DOES THAT HAPPEN FIGURE THIS OUT IN THE MORNING.
