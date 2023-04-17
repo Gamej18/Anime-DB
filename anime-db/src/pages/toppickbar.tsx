@@ -14,15 +14,15 @@ function Slider( {properties}: any ) {
     //     };
     // }, []);
     return (
-        <>
-            <h1>Hi</h1>
-            
-            {properties && properties.map((property: any) => (
-                <div>
-                    {property.animetitle}
-                </div>
-            ))}
-        </>
+      <div>
+        <h1>hi</h1>
+        {properties && properties.map((property: any) => (
+            <div>
+              {property.animetitle}
+            </div>
+          )
+        )}
+      </div>
     )
 }
 
