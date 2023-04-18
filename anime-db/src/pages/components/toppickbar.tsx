@@ -1,10 +1,11 @@
 import { data } from "jquery";
 import { useState, useEffect, useRef } from "react";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
-import { FadeInAnimation } from './components/animation.js';
-import connectToDatabase from '../../lib/mongodb.js';
+import { FadeInAnimation } from './animation.js';
+import connectToDatabase from '../../../lib/mongodb.js';
+import { Collection } from "mongoose";
 
-function Slider( {properties}: any ) {
+ function Slider({listofStrings}: any) {
     // const ref = useRef(null);
     // useEffect(() => {
     //     const animation = new FadeInAnimation(ref.current);
@@ -13,11 +14,18 @@ function Slider( {properties}: any ) {
     //         animation.stop();;
     //     };
     // }, []);
+    // var properties[] = getServerSideProps();
+    // if (properties == null)
+    // {
+    //   console.log("bob");
+    // }
+ 
     return (
       <div>
         <h1>hi</h1>
         {properties && properties.map((property: any) => (
             <div>
+              jjj
               {property.animetitle}
             </div>
           )
@@ -36,18 +44,6 @@ export default function RightClickHandle() {
             {active && <Slider />}
         </>
     )
-}
-
-export async function getServerSideProps() {
-    const { db } = await connectToDatabase()
-
-    const data = await db.collection("animes").find({}).limit(5).toArray();
-
-    const properties = JSON.parse(JSON.stringify(data));
-
-    return {
-        props: { properties:properties }
-    };
 }
 
 
