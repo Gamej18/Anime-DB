@@ -1,20 +1,20 @@
 import Head from 'next/head';
 import MenuBar from '@/pages/components/menubar';
-import Slider from '@/pages/components/toppickbar';
+import RightClickHandle from './topbar';
 import connectToDatabase from '../../lib/mongodb';
 
 export default function HomePage({ properties}: any) {
   return (
     <div>
-      <div>
+      {/* <div>
         {properties && properties.map((property: any) => (
             <div>
               {property.animetitle}
             </div>
           )
         )}
-      </div>
-      <Slider {...properties}/>
+      </div> */}
+      <RightClickHandle />
       <MenuBar />
       <Head>
         <title>Creat Next App</title>
@@ -25,16 +25,3 @@ export default function HomePage({ properties}: any) {
   );
 }
 
-
-export async function getServerSideProps() {
-  const { db } = await connectToDatabase()
-
-  const data = await db.collection("animes").find({}).limit(5).toArray();
-
-  const properties = JSON.parse(JSON.stringify(data));
-  console.log("bob2");
-
-  return {
-      props: { properties:properties }
-  };
-}
