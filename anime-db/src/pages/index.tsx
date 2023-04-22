@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import MenuBar from '@/pages/components/menubar';
-import RightClickHandle from './topbar';
+import RightClickHandle from './components/topbar';
 import connectToDatabase from '../../lib/mongodb';
 
 export default function HomePage({ properties}: any) {

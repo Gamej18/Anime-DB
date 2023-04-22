@@ -1,7 +1,7 @@
 // import { GetServerSideProps } from "next";
 import { useState, useEffect, useRef } from "react";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
-import connectToDatabase from '../../lib/mongodb.js';
+import connectToDatabase from '../../../lib/mongodb.js';
 
 //  export default function Slider({properties}: any) {
 //     return (
@@ -17,26 +17,27 @@ import connectToDatabase from '../../lib/mongodb.js';
 //     )
 // }
 
-export default function RightClickHandle({properties}: any) {
+export default function RightClickHandle({props}: any) {
     const [active, setActive] = useState(false);
     return (
         <>
-            <button onClick={() => setActive(!active)}>
+            <h1>jj</h1>
+            {/* <button onClick={() => setActive(!active)}>
                 <ArrowRightCircle/>
             </button>
             {active && properties && properties.map((property: any) => (
-            <div>
-              {property.animetitle}
-            </div>
-          )
-        )}
+                <div>
+                {property.animetitle}
+                </div>
+                )
+            )} */}
+            <h1>{props.animetitle}</h1>
         </>
     )
 }
 
 
 export async function getServerSideProps() {
-  
   
   const { db } = await connectToDatabase()
 
@@ -45,7 +46,7 @@ export async function getServerSideProps() {
   const properties = JSON.parse(JSON.stringify(data));
 
   return {
-      props: { properties:properties }
+      props: properties[0]
   };
 }
 
