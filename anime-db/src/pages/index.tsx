@@ -3,6 +3,7 @@ import MenuBar from '@/pages/components/menubar';
 import RightClickHandle from './components/topanime';
 import connectToDatabase from '../../lib/mongodb';
 import { ImportOutlined } from '@ant-design/icons';
+import TopAnime from './components/topanime';
 
 export default function HomePage({ properties}: any) {
   return (
@@ -15,7 +16,7 @@ export default function HomePage({ properties}: any) {
           )
         )}
       </div> */}
-      <RightClickHandle />
+      <TopAnime/>
       <MenuBar />
       <Head>
         <title>Creat Next App</title>

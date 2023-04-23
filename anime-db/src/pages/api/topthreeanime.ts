@@ -1,18 +1,15 @@
 import  juju from "../../images/Jujutsu-Kaisen-1.png";
-import vinland from "../../images/vinland.png";
-import eighty from "../../images/eight-six.png";
+import vinland from "../../images/vinlandsaga.png";
+import eighty from "../../images/eighty-six.png";
+import { StaticImageData } from "next/image.js";
 
-export const anime = [
-    {
-        "title": "Jujutsu Kaisen",
-        "image": juju
-    },
-    {
-        "title": "Vinland Saga",
-        "image" : vinland
-    },
-    {
-        "title": "Eighty-Six: 86",
-        "image": eighty
-    }
-]
+interface Anime {
+    title: string;
+    image: StaticImageData
+}
+
+
+export let jjk: Anime = {
+    title: "Jujutsu Kaisen",
+    image: juju
+}
