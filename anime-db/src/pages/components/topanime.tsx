@@ -6,7 +6,7 @@ import connectToDatabase from '../../../lib/mongodb.js';
 export default function TopAnime() {
     return(
         <>
-        
+            
         </>
     )
 }
