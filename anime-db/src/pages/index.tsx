@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import MenuBar from '@/pages/components/menubar';
-import RightClickHandle from './components/topbar';
+import RightClickHandle from './components/topanime';
 import connectToDatabase from '../../lib/mongodb';
 
 export default function HomePage({ properties}: any) {
@@ -25,3 +25,15 @@ export default function HomePage({ properties}: any) {
   );
 }
 
+export async function getServerSideProps() {
+  
+  const { db } = await connectToDatabase()
+
+  const data = await db.collection("animes").find({}).limit(5).toArray();
+
+  const properties = JSON.parse(JSON.stringify(data));
+
+  return {
+      props: properties[0]
+  };
+}
