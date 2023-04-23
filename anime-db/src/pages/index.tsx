@@ -2,6 +2,7 @@ import Head from 'next/head';
 import MenuBar from '@/pages/components/menubar';
 import RightClickHandle from './components/topanime';
 import connectToDatabase from '../../lib/mongodb';
+import { ImportOutlined } from '@ant-design/icons';
 
 export default function HomePage({ properties}: any) {
   return (
