@@ -1,7 +1,8 @@
+import $ from "jquery";
 import  juju from "../../images/Jujutsu-Kaisen-1.png";
 import vinland from "../../images/vinlandsaga.png";
 import eighty from "../../images/eighty-six.png";
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
 import Image from 'next/image';
 
@@ -19,6 +20,7 @@ export const JujuImage = () => {
         <div>
             <Image
                 className="juju-image"
+                id="ju"
                 src={juju}
                 alt="Jujutsu Kaisen"
             />
@@ -41,14 +43,11 @@ export const VinlandImage = () => {
 
 
 export default function RightClick() {
-    function clickedMe() {
-            useEffect(() =>{
-                var element = document.getElementById("vin");
-                element.style.zIndex = "1";
-            })
-    }
+        $("#vin").css('z-index',1000);
+        $("#ju").css('z-index',1000);
+        // requires a document??????????????????????????????????
     return (
-        <button onClick={clickedMe}>
+        <button onClick={RightClick}>
             <ArrowRightCircle/>
         </button>
     )
