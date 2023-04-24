@@ -1,7 +1,7 @@
 import  juju from "../../images/Jujutsu-Kaisen-1.png";
 import vinland from "../../images/vinlandsaga.png";
 import eighty from "../../images/eighty-six.png";
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
 import Image from 'next/image';
 
@@ -41,10 +41,11 @@ export const VinlandImage = () => {
 
 
 export default function RightClick() {
-    const ref = useRef(null);
     function clickedMe() {
-        var element = document.getElementById("vin");
-        element.style.zIndex = "1";
+            useEffect(() =>{
+                var element = document.getElementById("vin");
+                element.style.zIndex = "1";
+            })
     }
     return (
         <button onClick={clickedMe}>
