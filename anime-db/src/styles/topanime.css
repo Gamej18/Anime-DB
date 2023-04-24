@@ -1,0 +1,18 @@
+.juju-image {
+    position: absolute;
+    width: 2440px;
+    height: 654px;
+    left: 298px;
+    top: 0px;
+    z-index: 3; 
+}
+
+
+.vin-image {
+    position: absolute;
+    width: 2440px;
+    height: 654px;
+    left: 298px;
+    top: 0px;
+    z-index: 2;
+}

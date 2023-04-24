@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import '@/styles/menubar.css';
-import '@/styles/toppickbar.css';
+import '@/styles/topanime.css'
 import '@/styles/main.css';
 import type { AppProps } from 'next/app'
 
