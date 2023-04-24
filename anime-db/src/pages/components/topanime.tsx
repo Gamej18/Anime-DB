@@ -6,12 +6,12 @@ import  juju from "../../images/Jujutsu-Kaisen-1.png";
 import vinland from "../../images/vinlandsaga.png";
 import eighty from "../../images/eighty-six.png";
 import {jjk} from "../api/topthreeanime"
+import { MyImage } from "../api/topthreeanime";
 
 export default function TopAnime() {
     return(
         <>
-            <h1>{jjk.title}</h1>
-            <img>{jjk.image}</img>
+            <MyImage/>
         </>
     )
 }

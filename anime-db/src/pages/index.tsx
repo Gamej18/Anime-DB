@@ -7,7 +7,7 @@ import TopAnime from './components/topanime';
 
 export default function HomePage({ properties}: any) {
   return (
-    <div>
+    <div className="main-container">
       {/* <div>
         {properties && properties.map((property: any) => (
             <div>
@@ -16,8 +16,9 @@ export default function HomePage({ properties}: any) {
           )
         )}
       </div> */}
-      <TopAnime/>
+      
       <MenuBar />
+      <TopAnime/>
       <Head>
         <title>Creat Next App</title>
         <link rel="icon" href="/favicon,ico" />

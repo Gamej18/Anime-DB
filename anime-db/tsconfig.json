@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/index.tsx", "src/pages/components/menubar.tsx", "src/pages/toppickbar.tsx", "src/pages/api/properties.ts", "src/pages/components/animation.js", "lib/mongodb.js", "src/pages/api/topthreeanime.ts", "src/pages/components/topanime.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/index.tsx", "src/pages/components/menubar.tsx", "src/pages/toppickbar.tsx", "src/pages/api/properties.ts", "src/pages/components/animation.js", "lib/mongodb.js", "src/pages/api/topthreeanime.tsx", "src/pages/components/topanime.tsx"],
   "exclude": ["node_modules"]
 }
