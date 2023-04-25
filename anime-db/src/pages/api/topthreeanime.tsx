@@ -47,8 +47,12 @@ export const JujuImage = () => {
 export default function RightClick() {
     const inputElement:any = useRef();
 
-    const focusInput = () => {
+    const RightInput = () => {
         inputElement.current.style.zIndex = "-1";
+    }
+
+    const LeftInput = () => {
+        inputElement.current.style.zIndex = "1";
     }
         // requires a document??????????????????????????????????
     return (
@@ -61,7 +65,10 @@ export default function RightClick() {
                 src={vinland}
                 alt="Vinland Saga"
             />
-            <button onClick={focusInput}>
+            <button onClick={LeftInput}>
+                <ArrowLeftCircle/>
+            </button>
+            <button onClick={RightInput}>
                 <ArrowRightCircle/>
             </button>
         </div>
