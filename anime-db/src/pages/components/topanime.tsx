@@ -1,14 +1,14 @@
 // import { GetServerSideProps } from "next";
 import { useState, useEffect, useRef } from "react";
 import { JujuImage } from "../api/topthreeanime";
-import { VinlandImage } from "../api/topthreeanime";
+// import { VinlandImage } from "../api/topthreeanime";
 import RightClick from "../api/topthreeanime";
 
 export default function TopAnime() {
     return(
         <>
             <JujuImage/>
-            <VinlandImage/>
+            {/* <VinlandImage/> */}
             <RightClick/>
             
         </>

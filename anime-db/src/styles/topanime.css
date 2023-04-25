@@ -9,7 +9,7 @@
 
 
 .vin-image {
-    position: absolute;
+    position: relative;
     width: 2440px;
     height: 654px;
     left: 298px;

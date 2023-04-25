@@ -2,7 +2,7 @@ import $ from "jquery";
 import  juju from "../../images/Jujutsu-Kaisen-1.png";
 import vinland from "../../images/vinlandsaga.png";
 import eighty from "../../images/eighty-six.png";
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
 import Image from 'next/image';
 
@@ -28,27 +28,43 @@ export const JujuImage = () => {
     )
 }
 
-export const VinlandImage = () => {
+// export const VinlandImage = (props: any) => {
+//     return (
+//         <div >
+//             <Image
+//                 className="vin-image"
+//                 style={{color:props}}
+//                 id="vin"
+//                 src={vinland}
+//                 alt="Vinland Saga"
+//             />
+            
+//         </div>
+//     )
+// }
+
+
+export default function RightClick() {
+    const inputElement:any = useRef();
+
+    const focusInput = () => {
+        inputElement.current.style.zIndex = "-1";
+    }
+        // requires a document??????????????????????????????????
     return (
         <div>
+            {/* <h1 ref={inputElement}>changed</h1> */}
             <Image
                 className="vin-image"
+                ref={inputElement}
                 id="vin"
                 src={vinland}
                 alt="Vinland Saga"
             />
+            <button onClick={focusInput}>
+                <ArrowRightCircle/>
+            </button>
         </div>
-    )
-}
 
-
-export default function RightClick() {
-        $("#vin").css('z-index',1000);
-        $("#ju").css('z-index',1000);
-        // requires a document??????????????????????????????????
-    return (
-        <button onClick={RightClick}>
-            <ArrowRightCircle/>
-        </button>
     )
 }
