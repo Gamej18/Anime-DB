@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import MenuBar from '@/pages/components/menubar';
+import MenuBar from '@/pages/sidenav/menubar';
 import connectToDatabase from '../../lib/mongodb';
 import { ImportOutlined } from '@ant-design/icons';
-import TopAnime from './components/topanime';
+import TopAnime from './topbar/topanime';
 
 export default function HomePage({ properties}: any) {
   return (
