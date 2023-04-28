@@ -22,9 +22,11 @@ export default function TopMainComponent() {
     }
 
     return (
-        img[index];
-        <button onClick={RightClick}>
-            
-        </button>
+        <>
+            img[index];
+            <button onClick={RightClick}>
+                <ArrowRightCircle/>
+            </button>
+        </>
     )
 }
