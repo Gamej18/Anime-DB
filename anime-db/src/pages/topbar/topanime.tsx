@@ -8,9 +8,7 @@ export default function TopAnime() {
     return(
         <>
             <TopMainComponent/>
-            {/* <VinlandImage/> */}
-            <TopMainComponent/>
-            
+            {/* <VinlandImage/> */}            
         </>
     )
 }
