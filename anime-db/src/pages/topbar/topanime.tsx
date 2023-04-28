@@ -1,15 +1,15 @@
 // import { GetServerSideProps } from "next";
 import { useState, useEffect, useRef } from "react";
-import { JujuImage } from "./topthreeanime";
+import TopMainComponent  from "./topthreeanime";
 // import { VinlandImage } from "../api/topthreeanime";
 import RightClick from "./topthreeanime";
 
 export default function TopAnime() {
     return(
         <>
-            <JujuImage/>
+            <TopMainComponent/>
             {/* <VinlandImage/> */}
-            <RightClick/>
+            <TopMainComponent/>
             
         </>
     )
