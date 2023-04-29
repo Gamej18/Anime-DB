@@ -1,18 +1,3 @@
-.juju-image {
-    position: absolute;
-    width: 2440px;
-    height: 654px;
-    left: 298px;
-    top: 0px;
-
-}
-
-
-.vin-image {
-    position: absolute;
-    width: 2440px;
-    height: 654px;
-    left: 298px;
-    top: 0px;
-
+.topimage {
+    position: flex;
 }

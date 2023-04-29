@@ -9,22 +9,40 @@ import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
 
 export default function TopMainComponent() {
     const [index, setIndex] = useState(0);
+    // const img0 = require('../../images/Jujutsu-Kaisen-1.png');
+    // const img1 = require('../../images/vinlandsaga.png');
+    // const img2 = require('../../images/eighty-six.png');
     var imgList = [juju, vinland, eighty];
 
     function RightClick() {
-        setIndex(index + 1);
+        if(index < 2)
+        {
+            setIndex(index + 1);
+        }
     }
 
     function LeftClick() {
-        setIndex(index - 1);
+        if (index > 0)
+        {
+            setIndex(index - 1);
+        }
     }
 
     return (
         <>
-            <img src={imgList[index]} />
+            <button onClick={LeftClick}>
+                <ArrowLeftCircle />
+            </button>
             <button onClick={RightClick}>
                 <ArrowRightCircle/>
             </button>
+            <Image
+                className="topimage"
+                src={imgList[index]}
+                alt="jjk"
+                width={1200}
+                height={1440}
+            />
         </>
     )
 }
