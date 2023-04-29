@@ -9,8 +9,7 @@ import { ArrowLeftCircle, ArrowRightCircle } from "react-bootstrap-icons";
 
 export default function TopMainComponent() {
     const [index, setIndex] = useState(0);
-    var img = new Image(1080, 1920);
-    img = [juju, vinland, eighty];
+    var imgList = [juju, vinland, eighty];
 
     function RightClick() {
         setIndex(index + 1);
@@ -22,7 +21,7 @@ export default function TopMainComponent() {
 
     return (
         <>
-            img[index];
+            <img src={imgList[index]} />
             <button onClick={RightClick}>
                 <ArrowRightCircle/>
             </button>
