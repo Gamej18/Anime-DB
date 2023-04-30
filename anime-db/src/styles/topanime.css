@@ -4,7 +4,13 @@
     height: 700px;
 }
 
-/* .bi-arrow-left {
-    text-decoration: none;
-    text-decoration-color: blue;
-} */
+.bi-arrow-left {
+    font-size: xx-large;
+    width: min-content;
+    height:10px;
+    color: red;
+}
+
+.bi-arrow-right {
+    font-size: xx-large;
+}

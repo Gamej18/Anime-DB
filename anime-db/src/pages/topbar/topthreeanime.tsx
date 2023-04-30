@@ -31,7 +31,7 @@ export default function TopMainComponent() {
     return (
         <>
             <button className="leftbutton" onClick={LeftClick}>
-                <i className="bi bi-arrow-left" style="text-decoration:none"></i>
+                <i className="bi bi-arrow-left"></i>
             </button>
             <Image
                 className="topimage"
@@ -39,7 +39,7 @@ export default function TopMainComponent() {
                 alt="jjk"
             />
             <button onClick={RightClick}>
-                <ArrowRightCircle/>
+                <i className="bi bi-arrow-right"></i>
             </button>
         </>
     )
