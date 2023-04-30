@@ -1,6 +1,6 @@
 import $ from "jquery";
 import Image from "next/image";
-import  juju from "../../images/Jujutsu-Kaisen-1.png";
+import  juju from "../../images/jjk.jpg";
 import vinland from "../../images/vinlandsaga.png";
 import eighty from "../../images/eighty-six.png";
 import { useEffect, useState } from 'react';
@@ -33,16 +33,14 @@ export default function TopMainComponent() {
             <button onClick={LeftClick}>
                 <ArrowLeftCircle />
             </button>
-            <button onClick={RightClick}>
-                <ArrowRightCircle/>
-            </button>
             <Image
                 className="topimage"
                 src={imgList[index]}
                 alt="jjk"
-                width={1200}
-                height={1440}
             />
+            <button onClick={RightClick}>
+                <ArrowRightCircle/>
+            </button>
         </>
     )
 }

@@ -6,6 +6,7 @@ export default function MenuBar() {
         <div className="main">
              <CloseButton />
             <div className="menu" id="menu">
+                
                 <Search size={20} className="item-search" />
                 <ul className="item-list">
                     <li className="item-genre">Genre</li>
