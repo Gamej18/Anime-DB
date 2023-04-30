@@ -1,16 +1,26 @@
 .topimage {
-    position: flex;
+    position:fixed;
+    margin: 0;
+    top: 0;
     width: 2000px;
     height: 700px;
+    /* z-index: 2; */
 }
 
 .bi-arrow-left {
     font-size: xx-large;
-    width: min-content;
+    position: fixed;
+    padding: 100px;
     height:10px;
     color: red;
+    z-index: 1;
 }
 
 .bi-arrow-right {
     font-size: xx-large;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    color: red;
+    z-index: 1;
 }

@@ -29,7 +29,7 @@ export default function TopMainComponent() {
     }
 
     return (
-        <>
+        <div>
             <button className="leftbutton" onClick={LeftClick}>
                 <i className="bi bi-arrow-left"></i>
             </button>
@@ -41,6 +41,6 @@ export default function TopMainComponent() {
             <button onClick={RightClick}>
                 <i className="bi bi-arrow-right"></i>
             </button>
-        </>
+        </div>
     )
 }
