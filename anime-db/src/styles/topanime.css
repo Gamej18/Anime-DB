@@ -8,6 +8,18 @@
     /* z-index: 2; */
 }
 
+@media screen and (max-width: 1600px) {
+    .topimage {
+        position:fixed;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        width: 1000px;
+        height: 500px;
+    }
+
+}
+
 .bi-arrow-left {
     font-size: xx-large;
     position: fixed;
