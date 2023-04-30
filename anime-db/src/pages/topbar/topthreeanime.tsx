@@ -30,7 +30,7 @@ export default function TopMainComponent() {
 
     return (
         <>
-            <button onClick={LeftClick}>
+            <button className="leftbutton" onClick={LeftClick}>
                 <ArrowLeftCircle />
             </button>
             <Image

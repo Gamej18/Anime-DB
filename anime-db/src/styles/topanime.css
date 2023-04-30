@@ -3,3 +3,10 @@
     width: 2000px;
     height: 700px;
 }
+
+.leftbutton {
+    text-decoration: none;
+    width: 10px;
+    height: 10px;
+    text-decoration-color: blue;
+}
